@@ -1,9 +1,9 @@
 import axios from "axios";
 // Export an object containing methods
-
+export default{ 
     
-    export default {
-        getEmployees: () => {
-          return axios.get('https://randomuser.me/api/?results=1000');
-        }
-      };
+    getUsers:function(){    
+
+        return axios.get("https://randomuser.me/api/?results=200&nat=us");
+    }
+};

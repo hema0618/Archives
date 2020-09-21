@@ -1,23 +1,17 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Search from "./pages";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Wrapper from "./components/Wrapper";
-import "./App.css";
+import React from 'react';
+import Main from './components/Main';
+import Wrapper from './components/Wrapper';
+import Header from './components/Header';
+import './App.css';
 
 function App() {
-  document.title = " Searcher";
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Wrapper>
-          <Route exact path="/" component={Search} />
-        </Wrapper>
-        <Footer />
-      </div>
-    </Router>
+    <div className="App">
+       <Wrapper>
+     <Header />
+     <Main />
+   </Wrapper>
+    </div>
   );
 }
 
